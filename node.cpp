@@ -3,23 +3,27 @@
 
 using namespace std;
 
-Node :: Node(Student* newsdt) {
-  sdt = newsdt;
+Node :: Node() {
+  student = NULL;
   next = NULL;
 }
 
 Node :: ~Node() {
-  delete sdt;
+  delete student;
 }
 
-void Node :: setNext(Node* newNode) {
-  next = newNode;
+void Node :: setNext(Node* newNext) {
+  next = newNext;
 }
 
 Node* Node :: getNext() {
   return next;
 }
 
+void Node :: setStudent(Student* newStudent) {
+  student = newStudent;
+}
+
 Student* Node :: getStudent() {
-  return sdt;
+  return student;
 }

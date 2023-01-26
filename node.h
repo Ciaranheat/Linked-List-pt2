@@ -7,14 +7,16 @@ using namespace std;
 
 class Node {
  public:
-  Node(Student*);
+  Node();
   ~Node();
 
+  
+  void setStudent(Student*);
   Student* getStudent();
   Node* getNext();
-  void setNext(Node*);
+  void setNext(Node* newNext);
  private:
-  Student* sdt;
+  Student* student;
   Node* next;
 };
 #endif

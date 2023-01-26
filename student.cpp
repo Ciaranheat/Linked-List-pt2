@@ -1,6 +1,6 @@
 #include<iostream>
 #include "Student.h"
-#include <iomanip>x
+#include <iomanip>
 
 using namespace std;
 
