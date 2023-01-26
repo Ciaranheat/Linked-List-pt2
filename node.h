@@ -6,7 +6,7 @@
 using namespace std;
 
 class Node {
- public:
+public://Makes all of this public
   Node();
   ~Node();
 

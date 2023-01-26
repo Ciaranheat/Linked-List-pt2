@@ -3,7 +3,7 @@
 #include "Student.h"
 
 using namespace std;
-
+//Void of all the main functions
 void addStudent(Node* &head, Node* n);
 void printAll(Node* head);
 void printAverage(Node* n);
@@ -18,11 +18,11 @@ int main() {
   string in;
   int id = 0;
 
-  while (running == 1) {
+  while (running == 1) {//Kills the program when told too 
 
     cout << "enter command: [ADD,PRINT,DELETE,AVERAGE,QUIT]" << endl;
     cin >> in;
-    if (in == "ADD" || in == "Add" || in == "add") {
+    if (in == "ADD" || in == "Add" || in == "add") { //Adds student when told too 
       Student* s = new Student;
       s -> makeStudent();
       Node* n = new Node;
@@ -30,10 +30,10 @@ int main() {
 
       addStudent(Head,n);
     }
-    if (in == "PRINT" || in == "Print" || in == "print") {
+    if (in == "PRINT" || in == "Print" || in == "print") {//Prints out all students 
       printAll(Head);
     }
-    if (in == "DELETE" || in == "Delete" || in == "delete") {
+    if (in == "DELETE" || in == "Delete" || in == "delete") {//Deletes seleceted student 
       if (Head == NULL) {
 	cout << "Student not in list" << endl;
       }
@@ -46,10 +46,10 @@ int main() {
 
       }
     }
-    if (in == "AVERAGE" || in == "Average" || in == "average") {
+    if (in == "AVERAGE" || in == "Average" || in == "average") {//Averages gpa
       printAverage(Head);
     }
-    if ( in == "QUIT" || in == "Quit" || in == "quit") {
+    if ( in == "QUIT" || in == "Quit" || in == "quit") {//Quits when told
       running = 0;
     }
 
@@ -58,7 +58,7 @@ int main() {
   
 }
 
-void addStudent(Node* &head, Node* n){
+void addStudent(Node* &head, Node* n){//Function to add student
 
   if(head == NULL) {
     head = n;
@@ -77,7 +77,7 @@ void addStudent(Node* &head, Node* n){
 
 }
 
-void deleteStudent(Node* &head, int id) {
+void deleteStudent(Node* &head, int id) {//Function to delete student
   if(head == NULL) {
     return;
   }
@@ -101,7 +101,7 @@ void deleteStudent(Node* &head, int id) {
 }
 
 
-void printAll(Node* head){
+void printAll(Node* head){//Function to print all of the student
   if(head == NULL) {
     cout << endl;
     return;
@@ -113,7 +113,7 @@ void printAll(Node* head){
 
 }
 
-void printAverage(Node* n) {
+void printAverage(Node* n) {//Function to average grades
   float sum = 0;
   int count = 0;
   float avg = 0;

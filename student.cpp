@@ -16,24 +16,24 @@ Student :: ~Student() {
 
 }
 
-string Student :: getFN() {
+string Student :: getFN() { //Gets first name
   return firstname;
   
 }
 
-string Student :: getLN() {
+string Student :: getLN() {//Gets last name
   return lastname;
 }
 
-int Student :: getID() {
+int Student :: getID() {//Gets ID
   return id;
 }
 
-float Student :: getGPA() {
+float Student :: getGPA() {//Gets GPa
   return gpa;
 }
 
-void Student :: makeStudent() {
+void Student :: makeStudent() {//Makes the student 
   cin.ignore();
   cout << "Enter first Name: " << endl;
   cin.getline(firstname, 100);
@@ -50,7 +50,7 @@ void Student :: makeStudent() {
   cin.ignore();
 }
 
-void Student :: printStudent() {
+void Student :: printStudent() {//Format to how the student is printed
   cout << firstname << " " << lastname << ", " << id << ", ";
 
   cout.setf(ios :: fixed);

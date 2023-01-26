@@ -12,18 +12,18 @@ Node :: ~Node() {
   delete student;
 }
 
-void Node :: setNext(Node* newNext) {
+void Node :: setNext(Node* newNext) { //Sets next
   next = newNext;
 }
 
-Node* Node :: getNext() {
+Node* Node :: getNext() {//gets next
   return next;
 }
 
-void Node :: setStudent(Student* newStudent) {
+void Node :: setStudent(Student* newStudent) {//Sets student
   student = newStudent;
 }
 
-Student* Node :: getStudent() {
+Student* Node :: getStudent() {//Gets student
   return student;
 }

@@ -5,7 +5,7 @@
 using namespace std;
 
 class Student {
- public:
+public: //Makes all of this public
   Student();
   ~Student();
 
